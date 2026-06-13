@@ -1,0 +1,12 @@
+Livros Recomendados
+
+JavaScript - Guia definitivo(Tem um Rinoceronte na capa)
+
+JavaScript - Guia do Programador
+
+=======COMANDOS BASICOS=========
+
+window.alert   -> Exibe um alerta na pagina, antes de exibir o conteudo
+window.confirm -> Exibe uma mensagem para confirmação
+window.prompt  -> Montra uma mensagem para receber uma informação
+
