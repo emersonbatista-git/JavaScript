@@ -4,9 +4,39 @@ JavaScript - Guia definitivo(Tem um Rinoceronte na capa)
 
 JavaScript - Guia do Programador
 
+Para acessar o node.js, podemos pesquisar no windows ou pelo VS, em Terminal-> Novo Terminal-> digite node
+
+Para sair digite .exit
+Ctrl + l , limpa a tela de terminal
+
 =======COMANDOS BASICOS=========
 
 window.alert   -> Exibe um alerta na pagina, antes de exibir o conteudo
 window.confirm -> Exibe uma mensagem para confirmação
 window.prompt  -> Montra uma mensagem para receber uma informação
+
+========TIPOS DE VARIAVEIS======
+Variavel no JavaScript é escrita como var 
+Podemos utilizar para string  " ", ' ' , ` ` 
+Podem começar com letra ou $
+Nao pode começar com numeros
+Pode utilizar letras e numeros
+Pode utilizar acentos e simbolos
+Nao pode ter espaçoes
+Nao pode ser palavras reservadas
+
+DICAS 
+Maiuscula e minuscula fazem diferença
+tente utilizar nomes coerentes
+
+Comando typeof para verificar 
+
+number -> Inclui float e inter
+string -> Cadeia de caracter
+boolean -> true e false
+null-> é considerado um objeto no JS
+undefined
+object
+function
+
 
