@@ -6,6 +6,10 @@ JavaScript - Guia do Programador
 
 Para acessar o node.js, podemos pesquisar no windows ou pelo VS, em Terminal-> Novo Terminal-> digite node
 
+Comentario em JS -> // ou /* */
+Comentario em HTML -> <!-- -->
+Comentario em CSS -> /* */
+
 Para sair digite .exit
 Ctrl + l , limpa a tela de terminal
 
@@ -14,9 +18,11 @@ Ctrl + l , limpa a tela de terminal
 window.alert   -> Exibe um alerta na pagina, antes de exibir o conteudo
 window.confirm -> Exibe uma mensagem para confirmação
 window.prompt  -> Montra uma mensagem para receber uma informação
+document.write -> Printa na tela em forma de documento
+document.writeln -> Printa na tela em forma de documento com quebra de linha
 
 ========TIPOS DE VARIAVEIS======
-Variavel no JavaScript é escrita como var 
+Variavel no JavaScript é escrita como var ou lef
 Podemos utilizar para string  " ", ' ' , ` ` 
 Podem começar com letra ou $
 Nao pode começar com numeros
@@ -26,17 +32,84 @@ Nao pode ter espaçoes
 Nao pode ser palavras reservadas
 
 DICAS 
-Maiuscula e minuscula fazem diferença
-tente utilizar nomes coerentes
+* Maiuscula e minuscula fazem diferença
+* Tente utilizar nomes coerentes
+* Para exibir mais informações utilizamos a concatenação(+), porem nas versoes mais novas temos o recurso da Templates Strings(Formatador de String). 
+  Utiliza entre crase para limitar o template string e com o simbolo chamado placeholder ${s}. `Eu estou aprendendo ${s}` 
+Ex: 'O aluno ' + nome + ' com ' + idade + ' anos tirou a nota ' + nota  //Antiga
+    `O aluno ${nome} com ${idade} anos tirou a nota ${nota}`;           //Atual
+    
+    `
 
 Comando typeof para verificar 
 
 number -> Inclui float e inter
+number->Infinity
+number->NaN
 string -> Cadeia de caracter
 boolean -> true e false
 null-> é considerado um objeto no JS
 undefined
 object
+object->array
 function
+
+===== CONVERTER TIPO =======
+
+STRING PARA NUMBER
+
+<script>
+      var n1 = Number.parseInt( window.prompt("Digite um numero: "));
+      var n2 = Number.parseInt(window.prompt("Digite outro numero"));
+      var soma = n1 + n2;
+      window.alert("A soma de n1 e n2 é " + soma);
+
+      //(number + number) para adição
+      //(string + string) para concatenação
+      //o comando prompt sempre retona string
+      //Para utilizar como adição termos que fazer a converção de tipo na variavel n1 e n2 de string para number
+      //Number.parseInt(n) - força o tipo
+      //Number.parseFloat(n) - força o tipo
+      //Number(n) - O JS define o tipo se será float ou int
+      
+    </script>
+
+
+NUMBER PARA STRING
+
+String()
+n.toString()
+
+window.alert("A soma de n1 e n2 é " + String(soma));
+
+FORMATANDO STRING
+
+Alguns exemplos:
+
+length   -> quantos caracteres a string tem
+toUpperCase() -> tudo para Maiusculas
+toLowerCase() -> tudo para minusculo
+
+   <script>
+        var nome = window.prompt('Qual é seu nome? ');
+        document.write(`Olá ${nome}. Seu nome tem ${nome.length} letras.<br>`);
+        document.write(`Seu nome em minusculas é ${nome.toLowerCase()}<br>`);
+        document.write(`Seu nome em maiusculas é ${nome.toUpperCase()}<br>`);
+
+    </script>
+
+
+
+FORMATANDO NUMEROS
+
+toFixed(2) -> Fixa em duas casas decimais 
+toFixed(2).replace(' . ', ' , ') ->Substitui o ponto pela virgula
+toLocaleString('pt-BR', {style: 'currency: 'BRL'}) ->Utiliza a moeda pelo local, define o estilo monetario, mostra R$ do Brasil, USD mostra $, EUR em Euro
+
+
+
+
+
+
 
 
