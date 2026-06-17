@@ -31,15 +31,18 @@ Pode utilizar acentos e simbolos
 Nao pode ter espaçoes
 Nao pode ser palavras reservadas
 
-DICAS 
+======= DICAS ======= 
 * Maiuscula e minuscula fazem diferença
 * Tente utilizar nomes coerentes
 * Para exibir mais informações utilizamos a concatenação(+), porem nas versoes mais novas temos o recurso da Templates Strings(Formatador de String). 
   Utiliza entre crase para limitar o template string e com o simbolo chamado placeholder ${s}. `Eu estou aprendendo ${s}` 
 Ex: 'O aluno ' + nome + ' com ' + idade + ' anos tirou a nota ' + nota  //Antiga
     `O aluno ${nome} com ${idade} anos tirou a nota ${nota}`;           //Atual
+
+* Para toda expressao que tenha o valor relacional, o resultado sempre será booleano(False, True) 
+* O operador == é de igualdade(5 == '5' true), e o === é identico (5 === '5' false) sendo o valor e o tipo de variavel
     
-    `
+    
 
 Comando typeof para verificar 
 
@@ -107,7 +110,29 @@ toFixed(2).replace(' . ', ' , ') ->Substitui o ponto pela virgula
 toLocaleString('pt-BR', {style: 'currency: 'BRL'}) ->Utiliza a moeda pelo local, define o estilo monetario, mostra R$ do Brasil, USD mostra $, EUR em Euro
 
 
+======OPERADORES=======
+Principais
+*Aritimeticos  ( + , - , / , * ,  %(Resto de divisao, divisao inteira), **(Potencia))
+*Atribuição
+*Relacionais   (< , > , >= , <= , == , !=)
+*Logicos       !(Negação) , &&(Conjunção o mesmo que and) , ||(Dijunção o memso que or)
+*Ternario      ? : (teste ? tru:false)  media >= 7 ? 'Aprovado' : 'Reprovado'
 
+Ordem de precedencia -> 
+()
+**
+* / % o que vier primeiro
++ -   o que vier primeiro
+
+Ordem de precedencia com os tipos de operadores
+
+()  **  / * % + -
+ > < >= <= == === !=
+!
+&&
+||
+
+ 
 
 
 
