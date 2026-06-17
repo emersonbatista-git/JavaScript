@@ -113,3 +113,4 @@ toLocaleString('pt-BR', {style: 'currency: 'BRL'}) ->Utiliza a moeda pelo local,
 
 
 
+
