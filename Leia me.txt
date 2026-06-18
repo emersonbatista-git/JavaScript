@@ -132,6 +132,10 @@ Ordem de precedencia com os tipos de operadores
 &&
 ||
 
+
+====== DOM =======
+Document Object Model 
+
  
 
 
