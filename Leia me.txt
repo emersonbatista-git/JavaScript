@@ -134,8 +134,29 @@ Ordem de precedencia com os tipos de operadores
 
 
 ====== DOM =======
-Document Object Model 
+Document Object Model é um modelo de objeto para documento, roda somente no html, nao roda no nodeJS. Da acesso aos componentes internos do site.
 
+Arvore DOM
+Tres principais
+Arvore (window)  location
+                 document
+                 history  
+HTML              head
+                  body 
+
+Para verificar os componenetes criamos um script para visualizar:
+por marca (tag)
+por id
+por nome
+por classe
+por seletor
+
+
+<script>
+
+var p1 = window.document.getElementsByTagName('p') -> pode adicionar [0] para ver o primero paragrafo
+window.document.write(p1.innerText) -> ver o conteudo do primeiro paragrafo
+</script>
  
 
 
