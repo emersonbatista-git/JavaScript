@@ -156,6 +156,14 @@ por seletor
 
 var p1 = window.document.getElementsByTagName('p') -> pode adicionar [0] para ver o primero paragrafo
 window.document.write(p1.innerText) -> ver o conteudo do primeiro paragrafo
+
+
+ou
+
+Recomendado
+
+var d= window.document.querySelector('div#msg') -> Se for por ponto, troque # por .
+
 </script>
  
 
