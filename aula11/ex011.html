@@ -1,0 +1,32 @@
+html<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    Voce é de qual país? <input type="text" name="pais" id="pais">
+    <input type="button" value="Verificar" onclick="nacional()">
+
+    <div id="res"></div>
+
+    <script>
+    function nacional(){
+        var paisInput = window.document.querySelector('input#pais')
+        var res = window.document.querySelector('div#res')
+        
+        // Pegar o valor (.value) digitado em vez do elemento
+        var pais = paisInput.value.trim(); //função trim() limpa os espaços antes e depois do valor informado
+        
+        // Converter para maiúsculas para evitar erros de digitação (ex: 'brasil' ou 'Brasil')
+        if(pais.toUpperCase() === 'BRASIL'){
+            //  Limpar o resultado anterior e imprimir o novo
+            res.innerHTML = `<p>Voce é <strong>BRASILEIRO</strong>!</p>`;
+        } else {
+            res.innerHTML = '<p>Voce é estrangeiro!</p>';
+        }
+    }
+    </script>
+</body>
+</html>

@@ -20,6 +20,7 @@ window.confirm -> Exibe uma mensagem para confirmação
 window.prompt  -> Montra uma mensagem para receber uma informação
 document.write -> Printa na tela em forma de documento
 document.writeln -> Printa na tela em forma de documento com quebra de linha
+console.log -> para exibir no node.js com arquivos com extensao .js
 
 ========TIPOS DE VARIAVEIS======
 Variavel no JavaScript é escrita como var ou lef
