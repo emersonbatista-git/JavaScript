@@ -205,6 +205,19 @@ let pos = num.indexOf(8)
 console.log(pos)
 
 
+
+===== PROXIMOS PASSOS ========
+funcoes
+objetos
+modularizacao
+RegEx
+json
+ajax
+NodeJS
+
+
+
+
  
 
 
