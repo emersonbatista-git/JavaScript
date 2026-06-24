@@ -42,6 +42,7 @@ Ex: 'O aluno ' + nome + ' com ' + idade + ' anos tirou a nota ' + nota  //Antiga
 
 * Para toda expressao que tenha o valor relacional, o resultado sempre será booleano(False, True) 
 * O operador == é de igualdade(5 == '5' true), e o === é identico (5 === '5' false) sendo o valor e o tipo de variavel
+* JavaScript tem como debugar no VSCode
     
     
 
@@ -166,6 +167,15 @@ Recomendado
 var d= window.document.querySelector('div#msg') -> Se for por ponto, troque # por .
 
 </script>
+
+
+=== ESTRUTURAS DE CONTROLE ===
+
+if
+else
+while(enquanto)
+do...while (Faça, Enquanto)
+for (Para)
  
 
 
