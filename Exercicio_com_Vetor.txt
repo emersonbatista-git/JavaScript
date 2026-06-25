@@ -1,0 +1,114 @@
+
+========ARQUIVO HTML========
+
+Criou uma section onde foi criado duas div's:
+*A primeira serão os campos para digitar o numero e com as funções adicionar(), finalizar() e o campo de select onde serão inseridos os dados cadastrados
+	->Criou um input number onde será digitado o numero a ser adicionado
+            <input type="number" name="fnum" id="fnum">
+	->Criou um input button com o nome adicionar, onde irá chamar a função adicionar(), nesta função irão ter as validações dos dados
+	    <input type="button" value="Adicionar" onclick="adicionar()">
+	->Criou um select onde serão adicionados os numeros cadastrados
+            <br><br><select name="flista" id="flista" size="6"></select>
+	->Cruou um input button com o nome finalizar, onde irá chamar a função finalizar(), nesta função ter a exibição dos resultados na outra div criada
+            <br><input type="button" value="Finalizar" onclick="finalizar()">
+
+
+*A segunda div terá a id = "res", onde serão inseridos os resultados da função finalizar()
+            <div id="res">
+            
+            </div>
+
+*Logo apos o footer, foi inserido o caminho do arquivo que contam os scripts das funções 
+              <script src="script.js"></script>
+
+
+
+========ARQUIVO JAVASCRIPT========
+*Primeiramente criamos as variaveis que receberão os dados informados no html
+ 	
+let num = document.querySelector('input#fnum')
+let lista = document.querySelector('select#flista')
+let res = document.querySelector('div#res')
+
+*Criamos uma variavel que será o vetor onde serão cadastrados os numeros
+
+let valores = []
+
+
+*O botão adicionar irá envolver 3 funções:
+funcao adicionar() -> irá chamar duas funções para verificar se o numero está no intervalo(funcao isNumero()) e se já nao foi cadastrado(funcao inLista())
+
+function isNumero(n){
+    if(Number(n) >= 1 && Number(n) <= 100){
+        return true
+    }else{
+        return false
+    }
+
+}
+
+
+
+function inLista(n, l){
+    if (l.indexOf(Number(n)) != -1){
+        return true
+    }else{
+        return false
+    }
+
+}
+
+
+* Se foi tudo verdadeiro a funcao adicionar ira acresentar o valor:
+
+function adicionar(){
+    if(isNumero(num.value) && !inLista(num.value, valores)){ //chama as funções passando o numero digitado
+        valores.push(Number(num.value))                      //Acrescenta o valor digitado no vetor
+        let item = document.createElement('option')	     //Cria uma variavel para adicionar o item, no JS será option mas no html irá inserir no select, mesma função mas com nomes diferentes em cada ambiente
+        item.text = `Valor ${num.value} adionado.`	     //Irá exibir na tela a mensagem com o valor adicionado
+        lista.appendChild(item)				     //Adiciona o item na lista do vetor
+        res.innerHTML = ''				     //Ao adicionar ele carrega o res vazio
+
+    }else{
+        window.alert('Valor invalido ou já encontrado na lista.')
+    }
+    num.value = ''	//Caregar por padrao como vazio
+    num.focus()		//Ao clicar, voltar o cursor a piscar			
+
+}
+
+
+* depois de adicionar iremos analizar os dados com a função finalizar()
+
+function finalizar(){
+        if(valores.length == 0){ //Verifica se tem valor digitado
+            window.alert('Adicione valores antes de finalizar!')
+        }else{
+            let tot = valores.length //variavel tot recebe a quantidade de valores que tem no vetor, com a função length
+
+            let maior = valores[0]
+            let menor = valores[0]
+            let soma = 0
+            let media = 0
+
+            for(let pos in valores){	//Criou um foreach para ler o vetor armazenando na variavel pos do vetor valores
+                soma += valores[pos]
+               
+                if(valores[pos] > maior)
+                    maior = valores[pos]
+
+                if(valores[pos] < menor)
+                    menor = valores[pos]
+                }
+                
+             media = soma / tot
+		
+		//Comandos de exibição no html na div copm id res
+            res.innerHTML = ' '
+            res.innerHTML += `<p>Ao todo, temos ${tot} numeros cadastrados.</p>`
+            res.innerHTML += `<p>O maior valor informado foi ${maior}.</p>`
+            res.innerHTML += `<p>O menor valor informado foi ${menor}.</p>`
+            res.innerHTML += `<p>Somando todos os valores, temos ${soma}.</P>`
+            res.innerHTML += `<p>A media todos os valores, é ${media}.</P>`
+            
+        }
