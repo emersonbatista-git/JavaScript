@@ -15,7 +15,7 @@ function gerarJogo() {
 }
 
 // Repetir 3 vezes
-for (let i = 1; i <= 2; i++) {
+for (let i = 1; i <= 9; i++) {
   const jogo = gerarJogo();
   console.log(`Sorteio ${i}:`, jogo.join(', '));
 }
