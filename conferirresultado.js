@@ -31,7 +31,7 @@ function conferirMegaSena(resultado, apostas) {
 // === EXEMPLO DE USO ===
 
 // O resultado oficial do sorteio (6 números)
-const resultadoOficial =[12,22,41,45,51,52];
+const resultadoOficial =[2,3,20,25,39,57];
 
 // Seus jogos feitos (suporta jogos de 6 a 20 dezenas)
 const meusJogos = [
